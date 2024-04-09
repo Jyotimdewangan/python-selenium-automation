@@ -13,30 +13,33 @@ driver = webdriver.Chrome(service=service)
 driver.maximize_window()
 
 # open the url
-driver.get('https://www.amazon.com/')
-
-
+driver.get('https://www.amazon.com')
+sleep(15)
+#nav-link-accountList
+driver.find_element(By.ID,"nav-link-accountList").click()
+sleep(5)
 # click on  create amazon account
-#driver.find_element(By.CSS_SELECTOR,"#createAccountSubmit").click()
-
-#open create your amazon account
 driver.find_element(By.CSS_SELECTOR,"#createAccountSubmit").click()
+#driver.find_element(By.XPATH, "//a[text()='Create your Amazon account']")
+sleep(5)
+#open create your amazon account
+#driver.find_element(By.ID,"createAccountSubmit").click()
 
 #find registration page by clicking on start here text
-#driver.find_element(By.XPATH, "//a[text()='Start here.']").click()
+#driver.find_element(By.XPATH, "//a[text()='Start here']").click()
 
 #find Amazon logo
 driver.find_element(By.XPATH, "//i[@aria-label='Amazon']")
 
 #create account
-driver.find_element(By.XPATH, "//h1[text()='Create account']")
+driver.find_element(By.CSS_SELECTOR, "h1.a-spacing-small")
 
 #your name field
 driver.find_element(By.CSS_SELECTOR, "#ap_customer_name")
 #driver.find_element(By.ID,'ap_customer_name')
 
 #email field
-driver.find_element(By.CSS_SELECTOR, "ap_email")
+driver.find_element(By.CSS_SELECTOR, "#ap_email")
 #driver.find_element(By.ID,'ap_email')
 
 #find password field
@@ -48,7 +51,7 @@ driver.find_element(By.CSS_SELECTOR,"#ap_password_check")
 #driver.find_element(By.ID,'ap_password_check')
 
 #find continue (find create your amazon account)
-driver.find_element(By.CSS_SELECTOR,"#Continue")
+driver.find_element(By.CSS_SELECTOR,"#continue")
 #driver.find_element(By.ID,'Continue')
 
 
