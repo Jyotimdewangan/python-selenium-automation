@@ -58,6 +58,8 @@ driver.find_element(By.CSS_SELECTOR,"#continue")
 #find Conditions of use:
 driver.find_element(By.XPATH, "//a[text()='Conditions of Use']")
 
+
+
 # find Privacy Notice:
 driver.find_element(By.XPATH, "//a[text()='Privacy Notice']")
 
